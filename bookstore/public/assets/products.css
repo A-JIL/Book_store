@@ -1,0 +1,14 @@
+
+body {
+    background: linear-gradient(to right,  #fa9600,#f2e15c);
+    min-height: 100vh
+}
+
+.text-gray {
+    color: #aaa
+}
+
+img {
+    height: 170px;
+    width: 140px
+}
