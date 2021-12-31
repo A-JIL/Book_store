@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Products;
 use App\Models\Order;
+use Mail;
+use App\Mail\Kindle;
 
 class ProductController extends Controller
 {
@@ -45,7 +47,10 @@ class ProductController extends Controller
      $order->PRice=$pro->Price;
      $order->User_id=$id;
      $order->save();
-     return view('Users.orderplaced',['order'=>$order,'user'=>User::findOrFail($id),'pro'=>$pro]);
+     if(User::findOrFail($id)->Kindle_id!="null"){
+      Mail::to(User::find($id)->Email)->send(new Kindle(User::find($id),Product::find($pid)->Name));
+       }
+      return view('Users.orderplaced',['order'=>$order,'user'=>User::findOrFail($id),'pro'=>$pro]);
      
     }
     public function myOrders($id){

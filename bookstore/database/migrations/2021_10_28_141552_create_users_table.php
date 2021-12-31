@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->String('Role',25)->default("User");
             $table->String('Email',50);
             $table->String('Address',150);
+            $table->String('Kindle_id',50)->default('null');
             $table->String('Pincode',7);
             $table->String('Password',50);
             $table->boolean('Status')->default(0);

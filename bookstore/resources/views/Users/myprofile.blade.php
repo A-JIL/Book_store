@@ -51,7 +51,7 @@ Profile Updated
                             <div class="form-group form-primary"> <input type="text" class="form-control" name="Name" value="{{$user->Name}}" placeholder="Name" id="first_name" required> </div>
                             <div class="form-group form-primary"> <input type="text" class="form-control" name="Email" value="{{$user->Email}}" placeholder="Email" id="e" required> </div>
                             <div class="form-group form-primary"> <input type="text" class="form-control" name="Address" value="{{$user->Address}}" placeholder="Address" id="first_name"  required> </div>
-                           
+                            <div class="form-group form-primary"> <input type="text" class="form-control" name="Kindle_id" value="{{$user->Kindle_id}}" placeholder="Kindle_id" id="first_name"  required> </div>
                            <div class="form-group form-primary"> <input type="number" class="form-control" name="Pincode" value="{{$user->Pincode}}" placeholder="Pincode"  required> </div>
                           
                             <div class="row">

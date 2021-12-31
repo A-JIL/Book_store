@@ -17,6 +17,7 @@ class UserController extends Controller
         $user->Email=$req->post('Email');
         $user->Address=$req->post('Address');
         $user->pincode=$req->post('Pincode');
+        $user->Kindle_id=$req->post('Kindle_id');
         $user->save();
         session()->flash('ok','waring');
         return redirect()->back();
