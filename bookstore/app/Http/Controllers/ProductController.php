@@ -48,7 +48,7 @@ class ProductController extends Controller
      $order->User_id=$id;
      $order->save();
      if(User::findOrFail($id)->Kindle_id!="null"){
-      Mail::to(User::find($id)->Email)->send(new Kindle(User::find($id),Product::find($pid)->Name));
+      Mail::to(User::find($id)->Email)->send(new Kindle(User::find($id),Products::find($pid)->Name));
        }
       return view('Users.orderplaced',['order'=>$order,'user'=>User::findOrFail($id),'pro'=>$pro]);
      

@@ -42,6 +42,7 @@ img {
                                     
                                     <h6 class="font-weight-bold my-2">₹{{$p->Price}}</h6>
                                     <ul class="list-inline small">
+                                        <button type="button" id="demo" class="btn btn-danger btn-lg" onclick="sentTokindel()"><i class="fa fa-cart-plus mr-2"></i> Demo</button>
                                         <a href="/{{$user->id}}/buy/{{$p->id}}" ><button type="button"  class="btn btn-warning btn-lg"><i class="fa 
                                             fa-cart-plus mr-2"></i> Buy this product</button></a>
                                        
@@ -60,5 +61,7 @@ img {
            
             
         </div>
+
     </div>
+    
 @stop
